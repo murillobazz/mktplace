@@ -1,76 +1,68 @@
-# Desafio FrontEnd - OW Interactive
+# mktplace
 
-## Sobre a OW Interactive
+## Build Setup
 
-Fazemos parte do universo digital, focada em criar e desenvolver experiências interativas, integrando planejamento, criatividade e tecnologia. Conheça mais sobre nós em: [OW Interactive - Quem somos](http://www.owinteractive.com/quem-somos/).
+```bash
+# install dependencies
+$ yarn install
 
-## Pré-requisitos
+# serve with hot reload at localhost:3000
+$ yarn dev
 
-- HTML;
-- CSS;
-- Javascript (ES6+);
-- VueJS;
-- Task runners/module bundlers;
-- Conhecimentos sobre REST;
-- Conhecimentos sobre PWA;
-- Conhecimentos de Git.
+# build for production and launch server
+$ yarn build
+$ yarn start
 
-## Desafio
+# generate static project
+$ yarn generate
+```
 
-Faça o download do arquivo [clique aqui para baixar](https://www.dropbox.com/sh/x5wupfno5yqvmts/AADzmcp3hYuWbKYwqDYmmvCqa?dl=0) e após o download terminado siga as etapas listadas abaixo:
+For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
-### Etapa 1
+## Special Directories
 
-- Implementar o HTML/CSS/JS do layout .psd contido no arquivo baixado;
-- Implementar o banner rotativo da página de listagem de produtos;
-- Implementar o layout responsivo.
+You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
 
-### Etapa 2
+### `assets`
 
-- Na página de listagem dos produtos, faça:
-  * Consuma os produtos da API: [clique aqui para acessar a API](https://raw.githubusercontent.com/owInteractive/desafio-frontend-2020/master/produtos.json);
-  * Implementar o campo de pesquisa dos produtos;
-  * Implementar a funcionalidade de adição de um produto ao carrinho.
+The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
 
-### Etapa 3
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
 
- - Na página de carrinho, faça:
-    * A listagem de produtos adicionados ao carrinho e implemente todas as ações referentes ao carrinho (quantidade, remoção, etc.);
-    * Após a finalização da compra o usuário deverá ir para a página de checkout.
- - Na página de checkout, faça:
-    * Implementar o cadastro do usuário;
-    * Validar os campos que no design possuem o *;
-    * Implementar a busca por CEP. Utilizar alguma API disponível online, por exemplo: [ViaCEP](https://viacep.com.br/);
-    * Ao finalizar o cadastro do usuário exibir um modal de sucesso;
- - Documente o seu código.
+### `components`
 
-### Etapa 4
+The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
 
-- Salvar os produtos do carrinho no Local Storage do navegador, para caso, o usuário feche a aba/navegador ele possa retornar com os produtos no carrinho;
-- Seguir os requisitos de uma PWA, ex: ser responsivo, instalável, independente de conexão, etc...
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
 
-## Regras
+### `layouts`
 
-- Escrever HTML semântico;
-- Utilizar o template do VueJS (.vue);
-- Utilizar algum sistema de grid (ex: Bootstrap Grid);
-- Utilizar animações de hover;
-- Utilizar máscaras e validações no formulário;
-- Utilizar o Axios ou Fetch na integração da API;
-- Utilizar pré-processador para escrever o CSS (ex: SASS);
-- Utilizar algum task runner ou module bundler na compilação/transpilação dos seus assets;
-- **Atenção:** Não utilizar qualquer biblioteca de UI para desenvolver os componentes da página.
+Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
 
-## Diferenciais
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
 
-- Utilizar o Nuxt ou a Vue CLI no desenvolvimento do projeto;
-- Utilizar o ECMA6+ para escrever o JS;
-- Utilizar Typescript;
+### `pages`
 
-## Conclusão
+This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
 
-Crie um fork e submeta ao Github o seu desafio. Após isso envie um e-mail para letsrock@owinteractive.com, com o assunto [DESAFIO FRONT-END] com o link para o seu desafio. Obrigado por participar e boa sorte =)
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
 
+### `plugins`
 
+The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
 
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
 
+### `static`
+
+This directory contains your static files. Each file inside this directory is mapped to `/`.
+
+Example: `/static/robots.txt` is mapped as `/robots.txt`.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+
+### `store`
+
+This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
