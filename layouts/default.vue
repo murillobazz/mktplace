@@ -16,7 +16,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   $highlight-color: #8e36b7;
   $light-gray: #bbbbbb;
   $gray: #909090;
