@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  name: "Carousel",
   created() {
     this.current = this.images[0];
   },
@@ -58,7 +59,7 @@ export default {
       input[type=radio] {
         margin: 0 5px;
         height: 12px;
-        accent-color: #8e36b7;
+        accent-color: $highlight-color;
       }
   }
 }

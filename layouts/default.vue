@@ -63,7 +63,6 @@
     display: flex;
     background-color: $light-gray;
     padding: 10px 0;
-    position: fixed;
     left: 0;
     bottom: 0;
 
