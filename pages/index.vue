@@ -1,10 +1,10 @@
 <template>
   <div>
     <Carousel />
-    <div><h2>searchbar</h2></div>
+    <SearchBar @click="filterProducts"/>
     <div class="row container justify-content-center" style="margin: 0 auto;">
       <ProductCard
-        v-for="product in products"
+        v-for="product in filteredProducts"
         :key="product.id"
         :name="product.name"
         :category="product.category"
@@ -24,16 +24,27 @@ export default {
   data() {
     return {
       products: [],
+      searchText: "",
     }
   },
   async fetch() {
     this.products = await this.$axios.$get('https://raw.githubusercontent.com/owInteractive/desafio-frontend-2020/master/produtos.json');
   },
-  // methods: {
-  //   addToCart() {
+  methods: {
+    // addToCart() {
 
-  //   }
-  // }
+    // },
+    filterProducts(value) {
+      console.log(value);
+      this.searchText = value;
+    }
+  },
+  computed: {
+    filteredProducts() {
+      if (!this.searchText) return this.products;
+      return this.products.filter((element) => element.name.includes(this.searchText));
+    }
+  }
 }
 </script>
 

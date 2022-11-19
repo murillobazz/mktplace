@@ -40,7 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 #card {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 30px 10px;
   min-height: 450px;
   max-width: 360px !important;
