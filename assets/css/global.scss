@@ -6,6 +6,10 @@ $light-gray: #bbbbbb;
 $gray: #909090;
 $dark-gray: #666666;
 
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;

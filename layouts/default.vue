@@ -1,11 +1,11 @@
 <template>
   <div>
     <header>
-      <div>
+      <div class="content">
         <h1>Mkt<span>Place</span></h1>
-        <nav>
+        <nav class="d-flex">
           <NuxtLink to="/">Produtos</NuxtLink>
-          <NuxtLink to="/cart"><img src="~/assets/icons/shopping-cart.svg" alt="Carrinho"></NuxtLink>
+          <CartButton />
         </nav>
       </div>
     </header>
@@ -24,8 +24,9 @@
 
   header {
     width: 100vw;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 
-    div {
+    .content {
       margin: 0 auto;
       max-width: 1024px;
       display: flex;
@@ -48,6 +49,7 @@
         font-family: 'Source Sans Pro', sans-serif;
         font-weight: 700;
         color: $gray;
+        margin-right: 20px;
 
         &:hover {
           filter: brightness(0.7);
