@@ -6,6 +6,11 @@ $light-gray: #bbbbbb;
 $gray: #909090;
 $dark-gray: #666666;
 
+@mixin button-base {
+  padding: 10px 30px;
+  border: none;
+}
+
 * {
   font-family: 'Source Sans Pro', sans-serif;
 }

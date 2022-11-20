@@ -9,6 +9,9 @@ export const mutations = {
   remove(state, index) {
     state.cart.splice(index, 1);
   },
+  removeAll(state) {
+    state.cart.splice(0, state.cart.length);
+  },
   increment(state, index) {
     state.cart[index].count++;
   },
@@ -23,6 +26,9 @@ export const actions = {
   },
   remove({ commit }, index) {
     commit('remove', index);
+  },
+  removeAll({ commit }) {
+    commit('removeAll');
   },
   increment({ commit }, index) {
     commit('increment', index);

@@ -23,7 +23,7 @@
   $dark-gray: #666666;
 
   header {
-    width: 100vw;
+    width: 100%;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 
     .content {
@@ -61,7 +61,7 @@
   }
 
   footer {
-    width: 100vw;
+    width: 100%;
     display: flex;
     background-color: $light-gray;
     padding: 10px 0;
