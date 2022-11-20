@@ -1,6 +1,6 @@
 <template>
   <div id="checkout-form">
-    <form action="" class="row">
+    <form action="" class="row" onsubmit="event.preventDefault();">
       <div class="col-md col-12 form-column">
         <div class="py-2">
           <label for="nome">Nome*</label>
@@ -64,7 +64,7 @@
           </div>
         </div>
         <div class="d-flex">
-          <button :action="checkout" type="submit" class="my-4 ml-auto">Concluir compra</button>
+          <button @click="$emit('toggleModal')" class="my-4 ml-auto">Concluir compra</button>
         </div>
       </div>
     </form>
@@ -92,6 +92,7 @@ export default {
       }
     };
   },
+  props: ['toggleModal'],
   methods: {
     async checkCEP() {
       if (this.client.cep) {
@@ -103,10 +104,7 @@ export default {
         this.client.neighborhood = response.bairro;
       }
       else return;
-    },
-    // checkout() {
-
-    // }
+    }
   }
 };
 </script>
