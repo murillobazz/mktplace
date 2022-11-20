@@ -159,17 +159,10 @@ export default {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 14px;
     text-decoration: none;
-    border-radius: 3px;
   }
 
   .primary-btn {
-    background: $highlight-color;
-    color: #ffffff;
-    font-weight: 700;
-
-    &:active {
-      filter: brightness(0.7);
-    }
+    @include primary-button;
   }
 
   .secondary-btn {

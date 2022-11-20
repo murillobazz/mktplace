@@ -9,6 +9,16 @@ $dark-gray: #666666;
 @mixin button-base {
   padding: 10px 30px;
   border: none;
+  border-radius: 3px;
+}
+
+@mixin primary-button {
+  background: $highlight-color;
+  color: #ffffff;
+
+  &:active {
+    filter: brightness(0.7);
+  }
 }
 
 * {
