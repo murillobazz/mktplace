@@ -2,10 +2,13 @@
   <div>
     <Carousel />
     <SearchBar @click="filterProducts" />
-    <div class="row container justify-content-center" style="margin: 0 auto;">
+    <div v-if="this.products.length" class="row container justify-content-center mx-auto mb-5">
       <ProductCard v-for="product in filteredProducts" :key="product.id" :name="product.name"
         :category="product.category" :description="product.description" :price="product.price"
         :imageUrl="product.imageUrl" @addToCart="addToCart(product)" class="col-md-4 col-lg-3" />
+    </div>
+    <div v-else class="mx-auto my-5 d-flex justify-content-center">
+      <p style="font-size: 24px; font-weight: 700; color: #8e36b7;">Carregando produtos...</p>
     </div>
   </div>
 </template>

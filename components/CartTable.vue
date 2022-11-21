@@ -98,7 +98,7 @@ export default {
 
 <style lang="scss" scoped>
 #cart-table {
-  margin: 60px auto;
+  margin: 70px auto;
   max-width: 1024px;
   overflow-x: auto;
 
