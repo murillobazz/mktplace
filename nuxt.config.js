@@ -44,6 +44,9 @@ export default {
     manifest: {
       lang: 'en',
     },
+    meta: {
+      theme_color: '#8e36b7',
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

@@ -2,7 +2,8 @@
   <div id="carousel">
     <img :src="this.current.value" alt="Imagem do Carrossel">
     <div class="radio">
-      <input v-for="image in images" :key="image.id" type="radio" @change="changeImage(image)" name="image" />
+      <label for="image"></label>
+      <input v-for="image in images" :key="image.id" type="radio" @change="changeImage(image)" name="image" :checked="current.id === image.id"/>
     </div>
   </div>
 </template>
