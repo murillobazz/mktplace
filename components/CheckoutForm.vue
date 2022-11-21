@@ -97,7 +97,6 @@ export default {
     async checkCEP() {
       if (this.client.cep) {
         let response = await this.$axios.$get(`https://viacep.com.br/ws/${this.client.cep}/json/`).catch(e => console.log(e));
-        console.log(response);
         this.client.street = response.logradouro;
         this.client.city = response.localidade;
         this.client.state = response.uf;

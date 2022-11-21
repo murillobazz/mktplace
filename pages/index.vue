@@ -35,8 +35,6 @@ export default {
         }
       }
     }
-
-    console.log(this.cartContent);
   },
   methods: {
     addToCart(product) {

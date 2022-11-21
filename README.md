@@ -1,68 +1,42 @@
-# mktplace
+# 🛒 [MktPlace](https://mktplace-ow.vercel.app/)
 
-## Build Setup
+<small><i>(Este projeto foi feito por Murillo Bazilio, para participação no processo seletivo da OW Interactive.)</i></small>
 
+## 📘 Descrição
+
+  O 🛒 [MktPlace](https://mktplace-ow.vercel.app/) é uma aplicação Web/PWA que simula um sistema de ecommerce: o usuário poderá visualizar na página principal os produtos que são renderizados à partir de chamada para a API da OW Interactive. Nessa mesma página, o usuário pode adicionar produtos ao carrinho, e ao acessar o carrinho poderá ver seus produtos adicionados, e manipulá-los, incrementando ou decrementando suas quantidades, ou até removendo-os totalmente do mesmo. Por fim, o usuário pode simular uma finalização da compra ("checkout"), em que cadastrará seus dados, que serão validados pela própria HTML API de formulário.
+
+  A aplicação, ainda, utiliza a API de LocalStorage do JavaScript para salvar o conteúdo do carrinho do usuário: toda vez que este interage com o carrinho, a ação é reproduzida no LocalStorage, e ao renderizar novamente o index da aplicação, a mesma checa se o carrinho do usuário está vazio e se o mesmo tem conteúdo registrado em seu LocalStorage, se sim, seu carrinho é populado com os produtos e suas respectivas quantidades, mapeado através de uma simples conferência através do id de cada produto que é obtido através da API da OW Interactive.
+
+
+<hr>
+
+## 💾 Tecnologias
+
+  A aplicação foi feita utilizando [Vue 2](https://vuejs.org/) (Options API), que teve como ponto de partida o CLI do [create-nuxt-app](https://github.com/nuxt/create-nuxt-app/blob/master/README.md). É executada sobre [Node.js v16.1.0](https://nodejs.org/en/). Utiliza o [Axios](https://axios.nuxtjs.org/) (já incluído no setup inicial do create-nuxt-app) para fazer a chamada para a API e [Bootstrap](https://getbootstrap.com/) para funcionalidades de responsividade do layout em grid, além das classes CSS inline, também responsivas. Utiliza-se SCSS/SASS para a estilização de toda a aplicação, utilizando conceitos como "mixins" e variáveis para estilos globais da aplicação.
+  Por fim, é importante apontar que todos os componentes da aplicação foram de desenvolvimento próprio, não foi utilizado nenhum componente pronto de pacotes de terceiros.
+
+  A aplicação está disponível através de deploy no [Vercel](https://vercel.com/), você pode acessar clicando aqui -> [MktPlace](https://mktplace-ow.vercel.app/)
+<br>
+
+### Para rodar essa aplicação localmente (considerando que você tenha permissão de acesso):
 ```bash
-# install dependencies
+# Clone este repositório
+$ git clone <https://github.com/murillobazz/mktplace.git>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd mktplace
+
+# Instale as dependências
 $ yarn install
 
-# serve with hot reload at localhost:3000
+# Execute a aplicação em modo de desenvolvimento
 $ yarn dev
 
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 ```
+<hr>
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## 👨‍💻 Como usar
 
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+  O usuário poderá visualizar na página principal os produtos. Nessa mesma página, o usuário pode adicionar produtos ao carrinho, e ao acessar o carrinho poderá ver seus produtos adicionados, e manipulá-los, incrementando ou decrementando suas quantidades, ou até removendo-os totalmente do mesmo. Por fim, o usuário pode simular uma finalização da compra ("checkout"), em que cadastrará seus dados.
