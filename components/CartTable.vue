@@ -10,7 +10,7 @@
       </tr>
       <tr v-for="product in cartContent" :key="product.id">
         <td>
-          <img @click="removeProduct" src="~/assets/icons/garbage.svg" alt="Lixeira" width="16px" />
+          <img @click="removeProduct(product)" src="~/assets/icons/garbage.svg" alt="Lixeira" width="16px" />
         </td>
         <td>
           <small>{{ product.category }}</small>
@@ -18,7 +18,7 @@
         </td>
         <td>
           <p class="text-center" style="letter-spacing: -3px;">
-            <span class="quantity-input p-2" @click="decrementProduct(product)">-</span>
+            <span class="quantity-input p-2" @click="product.count === 1 ? removeProduct(product) : decrementProduct(product)">-</span>
             <span class="quantity-value p-2">{{ product.count }}</span>
             <span class="quantity-input p-2" @click="incrementProduct(product)">+</span>
           </p>
@@ -70,17 +70,21 @@ export default {
   methods: {
     removeProduct(product) {
       this.$store.dispatch('remove', this.cartContent.indexOf(product));
+      localStorage.removeItem("product" + product.id);
     },
     removeAll() {
       this.$store.dispatch('removeAll');
+      localStorage.clear();
     },
     incrementProduct(product) {
       let hasProduct = this.cartContent.find(el => el.id === product.id);
       this.$store.dispatch('increment', this.cartContent.indexOf(hasProduct));
+      localStorage.setItem("product" + product.id, hasProduct.count);
     },
     decrementProduct(product) {
       let hasProduct = this.cartContent.find(el => el.id === product.id);
       this.$store.dispatch('decrement', this.cartContent.indexOf(hasProduct));
+      localStorage.setItem("product" + product.id, hasProduct.count);
     },
     currencyFormatter(value) {
       return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });

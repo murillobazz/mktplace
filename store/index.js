@@ -17,6 +17,9 @@ export const mutations = {
   },
   decrement(state, index) {
     state.cart[index].count--;
+  },
+  populate(state, array) {
+    state.cart.push(array);
   }
 };
 
@@ -35,6 +38,9 @@ export const actions = {
   },
   decrement({ commit }, index) {
     commit('decrement', index);
+  },
+  populate({ commit }, array) {
+    commit('populate', array);
   },
 };
 
